@@ -1,0 +1,89 @@
+﻿@page
+@model WeddingHallsListModel
+@{
+}
+    <head>
+        <script src="https://kit.fontawesome.com/06d2fabce8.js" crossorigin="anonymous"></script>
+    </head>
+<style>
+    body {
+        background-color:lightgray;
+    }
+
+    .przyciskwyszukania:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+        .centrum {
+            text-align:center;
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .przesunieta {
+            margin-top:2%;
+        }
+</style>
+<body>
+    <div class="przesunieta">
+        <form method="get">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="search" placeholder="Wyszukaj po nazwie sali" asp-for="SearchByName" class="przyciskwyszukania" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="search" placeholder="Wyszukaj po nazwie lokalizacji" class="przyciskwyszukania" asp-for="SearchByLocation" />
+                <span class="input-group-btn">
+                    <button class="btn btn-default"><i class="fas fa-search"></i></button>
+                </span>
+            </div>
+
+
+
+        </form>
+    </div>
+
+
+
+
+
+    <div class="przesunieta">
+        <table class="table">
+            @foreach (var weddingHall in Model.WeddingHalls)
+            {
+                <tr>
+                    <td>@weddingHall.Id</td>
+                    <td>@weddingHall.Name</td>
+                    <td>@weddingHall.Location</td>
+                    <td>
+                        <a href="@weddingHall.NetAdress">@weddingHall.NetAdress</a>
+                    </td>
+                    <td>@weddingHall.Quality</td>
+                    <td>
+                        <a class="btn btn-dark"
+                           asp-page="./Detail"
+                           asp-route-weddingHallId="@weddingHall.Id">Detail</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-dark"
+                           asp-page="./Edit"
+                           asp-route-weddingHallId="@weddingHall.Id">Edit</a>
+                    </td>
+                </tr>
+            }
+        </table>
+        <div class="centrum">
+            <a asp-page="./Edit" class="btn btn-success">Dodaj nową salę weselną</a>
+
+            <a asp-page="/MainPage" class="btn btn-success">Powrót do strony użytkownika</a>
+        </div>
+    </div>
+
+</body>

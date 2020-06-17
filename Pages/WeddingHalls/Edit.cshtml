@@ -1,0 +1,42 @@
+﻿@page "{weddingHallId:int?}"
+@model WeddingApp.Pages.WeddingHalls.EditModel
+@{
+    ViewData["Title"] = "Edit";
+    
+}
+
+<h1>Edycja @Model.WeddingHall.Name</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="WeddingHall.Id" />
+    <div class="form-group">
+        <label asp-for="WeddingHall.Name"></label>
+        <input asp-for="WeddingHall.Name" class="form-control" />
+        <span class="text-danger" asp-validation-for="WeddingHall.Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="WeddingHall.Location"></label>
+        <input asp-for="WeddingHall.Location" class="form-control" />
+        <span class="text-danger" asp-validation-for="WeddingHall.Location"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="WeddingHall.NetAdress"></label>
+        <input asp-for="WeddingHall.NetAdress" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="WeddingHall.Quality"></label>
+        <select class="form-control" asp-for="WeddingHall.Quality"
+                asp-items="Model.Qualities"
+                >
+
+
+        </select>
+    </div>
+
+    
+    <button type="submit" class="btn btn-primary">Save</button>
+
+
+
+</form>
+

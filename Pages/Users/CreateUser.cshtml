@@ -1,0 +1,77 @@
+﻿@page
+@model WeddingApp.CreateUserModel
+@{
+    ViewData["Title"] = "Stwórz Użytkownika";
+
+}
+    <head>
+        <script src="https://kit.fontawesome.com/06d2fabce8.js" crossorigin="anonymous"></script>
+    </head>
+<style>
+    body {
+        background-color: lightgray;
+    }
+
+    h1 {
+        text-align: center;
+    }
+    .logowanie {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #17a2b8;
+    width: 20%;
+    border: 2px solid black;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+.buttonSubmit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 35%;
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.message {
+    text-align:center;
+    font-style:italic;
+    margin-top:2%;
+}
+
+    
+    
+</style>
+<body>
+    <h1> Tworzenie konta</h1>
+    <a asp-page="/Index" class="btn btn-success btn-lg"> Powrót do strony głównej</a>
+
+
+    <form method="post">
+        <div class="logowanie">
+
+
+            <input type="hidden" asp-for="User.Id">
+
+            <div class="btn btn-info">
+                <label asp-for="User.Login"> </label>
+                <input asp-for="User.Login" class="form-control">
+                <span class="text-danger" asp-validation-for="User.Login"> </span>
+            </div> <br />
+            <div class="btn btn-info">
+                <label asp-for="User.Password"> </label>
+                <input type="password" asp-for="User.Password" class="form-control">
+                <span class="text-danger" asp-validation-for="User.Password"> </span>
+            </div> <br />
+
+            <button type="submit" class="buttonSubmit"> Zatwierdź</button>
+
+        </div>
+    </form>
+    <div class="message">@Model.Message</div>
+
+
+
+</body>

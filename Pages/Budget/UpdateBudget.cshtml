@@ -1,0 +1,91 @@
+﻿@page
+
+@model WeddingApp.Pages.Deadlines.UpdateBudgetModel
+@{
+    ViewData["Title"] = "UpdateBudget";
+}
+<head>
+    <script src="https://kit.fontawesome.com/06d2fabce8.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        background-color: lightgray;
+    }
+
+    .przyciskwyszukania:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    
+    .artykuly article {
+        max-width:30%;
+        display:inline-block;
+    }
+</style>
+<body>
+    <h2 style="text-align:center">Aktualizowanie wydatków</h2>
+    <form method="post">
+        <input type="hidden" asp-for="Budget.Id" />
+        <div class="artykuly">
+            <article>
+                <label asp-for="Budget.NumberOfGuests">Przewidywana liczba gości</label> <br />
+                <input asp-for="Budget.NumberOfGuests" class="przyciskwyszukania" />
+            </article>
+            <article>
+                <label asp-for="Budget.PlateCost">Koszt talerzyka</label><br />
+                <input asp-for="Budget.PlateCost" class="przyciskwyszukania" />
+            </article>
+            <article>
+                <label asp-for="Budget.WeddingHallAdvance"> Zaliczka na sale weselną</label><br />
+                <input asp-for="Budget.WeddingHallAdvance" class="przyciskwyszukania" />
+            </article>
+        </div>
+
+        <div class="artykuly">
+            <article>
+                <label asp-for="Budget.DjAdvance"> Zaliczka na dja</label><br />
+                <input asp-for="Budget.DjAdvance" class="przyciskwyszukania" />
+            </article>
+            <article>
+                <label asp-for="Budget.DjCost"> Koszt całkowity dja</label><br />
+                <input asp-for="Budget.DjCost" class="przyciskwyszukania" />
+            </article>
+        </div>
+        <div class="artykuly">
+            <article>
+                <label asp-for="Budget.CameraManAdvance">Zaliczka na kamerzystę</label><br />
+                <input asp-for="Budget.CameraManAdvance" class="przyciskwyszukania" />
+            </article>
+            <article>
+                <label asp-for="Budget.CameraManCost">Koszt całkowity koszt całkowity kamerzysty</label><br />
+                <input asp-for="Budget.CameraManCost" class="przyciskwyszukania" />
+            </article>
+        </div>
+        <div class="artykuly">
+            <article>
+                <label asp-for="Budget.PhotographerAdvance">Zaliczka na fotografa</label><br />
+                <input asp-for="Budget.PhotographerAdvance" class="przyciskwyszukania" />
+            </article>
+            <article>
+                <label asp-for="Budget.PhotographerCost">Koszt całkowity fotografa</label><br />
+                <input asp-for="Budget.PhotographerCost" class="przyciskwyszukania" />
+            </article>
+        </div>
+        <div class="artykuly">
+            <article>
+                <label asp-for="Budget.FlowersAdvance">Zaliczka na florystkę</label><br />
+                <input asp-for="Budget.FlowersAdvance" class="przyciskwyszukania" />
+            </article>
+            <article>
+                <label asp-for="Budget.FlowersCost">Koszt całkowity florystki</label><br />
+                <input asp-for="Budget.FlowersCost" class="przyciskwyszukania" />
+            </article>
+        </div>
+        <div style="text-align:center">
+            <button type="submit" class="btn btn-success"><i class="fas fa-save" style="font-size:60px"></i></button>
+        </div>
+    </form>
+</body>

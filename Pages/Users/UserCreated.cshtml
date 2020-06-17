@@ -1,0 +1,32 @@
+﻿@page
+@model WeddingApp.UserCreatedModel
+@{
+    ViewData["Title"] = "UserCreated";
+
+}
+<style>
+    body {
+        background-color: slategray;
+    }
+
+    h1 {
+        text-align: center;
+        
+    }
+    .centralnie {
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+        margin-top:20%;
+    }
+</style>
+<body>
+    <div class="centralnie">
+        <h1>Użytkownik stworzony poprawnie!</h1>
+        <a asp-page="/Index" class="btn btn-success">Wróć do strony głównej</a>
+        <a asp-page="./Login" class="btn btn-success">Przejdź do strony logowania</a>
+    </div>
+</body>
+
+

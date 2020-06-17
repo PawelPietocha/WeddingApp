@@ -1,0 +1,94 @@
+﻿@page
+
+
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Stwórz własne wesele";
+}
+    <head>
+        <script src="https://kit.fontawesome.com/06d2fabce8.js" crossorigin="anonymous"></script>
+    </head>
+<style>
+    body {
+        background-image: url("../wedsites.jpg");
+    }
+    h1 {
+        text-align: center;
+    }
+
+    article {
+        max-width: 19%;
+        display: inline-block;
+        border: 2px solid black;
+        text-align: center;
+        height: 30%;
+        background-color:azure;
+    }
+    .artykuly {
+        width:100%;
+        height:45%;
+        
+        
+       
+    }
+    .tekst1 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 180px;
+        max-height: 200px;
+        overflow-x: hidden;
+        font: bold;
+    }
+    .podtytul {
+        color:green;
+        font:bold;
+        
+    }
+</style>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/css/MainStyle.css" />
+</head>
+
+<body>
+    <h1>@ViewData["Title"]</h1>
+
+    <div class="artykuly">
+        <article>
+            <div class="podtytul"> Dodaj swoje wesele!</div>
+            <br />
+            <p class="tekst1"> Wypełnij formularz, aby otrzymać swój wymarzony planner weselny, z nim nie zapomnisz o niczym!</p>
+            <a href="/Deadline/WeddingDate"> <i class="fas fa-glass-martini" style="font-size:120px"></i></a>
+        </article>
+        <article>
+            <div class="podtytul"> Sprawdź sale weselne</div>
+            <br />
+            <p class="tekst1"> Jeśli wciąż nie masz wybranej sali weselnej wejdź w link i wyszukaj swoją wymarzoną sale z naszej bogatej listy</p>
+            <a href="/WeddingHalls/WeddingHallsList"> <i class="fas fa-hotel" style="font-size:120px"></i></a>
+        </article>
+        <article>
+            <div class="podtytul">Sprawdzaj terminy!</div>
+            <br />
+    <p class="tekst1">Po dodaniu swojego wesela możesz tutaj obserwować wszelkie terminy, których się powinieneś trzymać</p>
+    <a href="/Deadline/Deadline"><i class="fas fa-hourglass-half" style="font-size:120px"></i></a>
+    </article>
+        <article>
+            <div class="podtytul"> Zarządzaj budżetem!</div>
+            <br />
+            <p class="tekst1"> Tutaj możesz dodawać wszelkie koszty wesela, oraz zobaczyć podsumowanie</p>
+            <a href="/Budget/BudgetList"> <i class="fas fa-euro-sign" style="font-size:120px"></i></a>
+        </article>
+        <article>
+            <div class="podtytul">Goście!</div>
+            <br />
+            <p class="tekst1">Zobacz listę gości lub dodaj nowego gościa</p>
+            
+            <a href="Guests/GuestView"><i class="fas fa-address-card" style="font-size:120px"></i></a>
+        </article>
+    </div>
+
+</body>
+</html>

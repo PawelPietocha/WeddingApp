@@ -1,0 +1,94 @@
+﻿
+
+
+    
+
+
+.Naglowek {
+    text-align: center;
+    color: black;
+    padding: 10px;
+    width: 480px;
+    height: 400px;
+    background-image: url("../kwiaty.jpg");
+    background-size: contain;
+    margin-left: auto;
+    margin-right: auto;
+    display: table-cell;
+    vertical-align: middle;
+    transform: translate(66%)
+}
+
+
+a {
+    text-decoration: underline;
+}
+
+    a:hover {
+        font-style: italic;
+        color: #4fd715;
+    }
+
+.tekst {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 180px;
+    width: 20%;
+    max-height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+    border: 1px solid #000000;
+    background-image: url("../salaweselna.jpg");
+    background-size:contain;
+    font-size:larger;
+    font-weight:bold;
+}
+
+.poradnik {
+    border: 1px solid #000000;
+    background-color:#566a35;
+    animation-name: example;
+    animation-duration: 10s;
+}
+@keyframes example {
+    0% {
+        background-color: black;
+    }
+    25% {
+        background-color: blue;
+    }
+    50% {
+        background-color: red;
+    }
+    100% {
+        background-color: yellow;
+    }
+}
+.przypietyobraz {
+    
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+}
+.logowanie {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #17a2b8;
+    width: 20%;
+    border: 10px solid black;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+.buttonSubmit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}

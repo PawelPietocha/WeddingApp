@@ -1,0 +1,44 @@
+﻿@page
+@model WeddingApp.GuestListModel
+@{
+    ViewData["Title"] = "GuestList";
+    
+}
+    <head>
+        <script src="https://kit.fontawesome.com/06d2fabce8.js" crossorigin="anonymous"></script>
+
+    </head>
+<style>
+    body {
+        background-color:lightgray;
+    }
+</style>
+<body>
+
+
+    <h2 style="text-align:center">Lista gości</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Osoba towarzyszaca</th>
+                <th>Zakwaterowanie</th>
+            </tr>
+        </thead>
+        @foreach (var guest in Model.Guests)
+        {
+            <tr>
+                <td>@guest.Name</td>
+                <td>@guest.LastName</td>
+                <td>@guest.AccompanyingPerson</td>
+
+                <td>@guest.Accomodation</td>
+            </tr>
+
+        }
+    </table>
+    <a asp-page="./GuestView" class="btn btn-success">Wróć do strony zarządzania gośćmi</a>
+
+</body>

@@ -1,0 +1,45 @@
+﻿@page
+@model WeddingApp.Pages.Deadlines.WeddingDateModel
+@{
+    ViewData["Title"] = "WeddingDate";
+
+}
+<style>
+    body {
+        background-color:lightgray;
+    }
+    h1 {
+        text-align: center;
+    }
+
+    .aktualny {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-top: 15%;
+    }
+</style>
+
+
+<body>
+    <section class="aktualny">
+        <h1>Data Ślubu</h1>
+        <div>Witaj @Model.User.Login</div>
+
+        <form method="post">
+
+            <input type="hidden" asp-for="User.Id" />
+            <div class="form-group">
+                <label>Wprowadź swój termin wesela lub zmień</label>
+                <input type="date" asp-for="@Model.User.WeddingDate" />
+                <span class="text-danger" asp-validation-for="@Model.User.WeddingDate"></span>
+            </div>
+            <div style="display:inline-block">
+                <button type="submit" class="btn btn-success">Zapisz</button>
+                <a asp-page="/MainPage" class="btn btn-success">Powrót do strony użytkownika</a>
+            </div>
+        </form>
+
+    </section>
+</body>

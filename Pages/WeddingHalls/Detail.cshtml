@@ -1,0 +1,25 @@
+﻿@page "{weddingHallId:int}"
+@model WeddingApp.Pages.WeddingHalls.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+    
+}
+
+<h1>@Model.WeddingHall.Name</h1>
+<div>
+    Id:@Model.WeddingHall.Id
+</div>
+<div>
+    Nazwa sali:@Model.WeddingHall.Name
+</div>
+<div>
+    Lokalizacja:@Model.WeddingHall.Location
+</div>
+<div>
+    Adres strony internetowej:@Model.WeddingHall.NetAdress
+</div>
+<div>
+    Jakość sali:@Model.WeddingHall.Quality
+</div>
+
+<a asp-page="./WeddingHallsList" class="btn btn-info"> Wróć do listy wszystkich sal weselnych</a>

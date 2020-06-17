@@ -1,0 +1,62 @@
+﻿@page
+@model WeddingApp.AddGuestModel
+@{
+    ViewData["Title"] = "AddGuest";
+    
+}
+<style>
+    body{
+        background-color:lightgray;
+    }
+    .panel {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #17a2b8;
+        width: 20%;
+        border: 2px solid black;
+        border-bottom-left-radius: 20%;
+        border-bottom-right-radius: 20%;
+    }
+</style>
+<body>
+
+
+    <h2 style="text-align:center">Dodawanie gościa</h2>
+    <div class="panel">
+
+
+        <form method="post">
+            <input type="hidden" asp-for="Guest.Id" />
+            <input type="hidden" asp-for="Guest.WeddingNumber" />
+            <div class="form-group">
+                <label> Imię</label>
+                <input asp-for="Guest.Name" class="form-control" />
+                <span class="text-danger" asp-validation-for="Guest.Name"></span>
+            </div>
+            <div class="form-group">
+                <label> Nazwisko</label>
+                <input asp-for="Guest.LastName" class="form-control" />
+                <span class="text-danger" asp-validation-for="Guest.LastName"></span>
+            </div>
+            <div class="form-group">
+                <label> Osoba towarzysząca</label>
+                <input asp-for="Guest.AccompanyingPerson" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label> Nocleg</label>
+                <input asp-for="Guest.Accomodation" class="form-control" />
+            </div>
+            <div style="text-align:center">
+                <button type="submit" class="btn btn-success">Dodaj</button>
+            </div>
+        </form>
+    </div>
+    <div style="margin-top:2%">
+
+    
+    <div style="text-align:center">
+        <a asp-page="/MainPage" class="btn btn-success">Powrót do strony użytkownika</a>
+    </div>
+    </div>
+</body>

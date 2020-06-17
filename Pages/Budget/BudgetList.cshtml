@@ -1,0 +1,70 @@
+﻿@page
+@model WeddingApp.Pages.Deadlines.BudgetListModel
+@{
+    ViewData["Title"] = "BudgetList";
+    
+}
+<style>
+    body {
+        background-color:lightgray;
+    }
+    .przyciski {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+</style>
+    <body>
+        <h2 style="text-align:center">Wydatki</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Usługodawca</th>
+                    <th>Zaliczka</th>
+                    <th>Ile zostało do zapłaty</th>
+                    <th>Koszt całkowity</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>DJ</td>
+                <td>@Model.Budget.DjAdvance</td>
+                <td>@Model.LeftToPay.DjLeft</td>
+                <td>@Model.Budget.DjCost</td>
+            </tr>
+            <tr>
+                <td>Sala Weselna</td>
+                <td>@Model.Budget.WeddingHallAdvance</td>
+                <td>@Model.LeftToPay.WeddingHallLeft</td>
+                <td>@Model.Budget.WeddingHallCost</td>
+            </tr>
+            <tr>
+                <td>Fotograf</td>
+                <td>@Model.Budget.PhotographerAdvance</td>
+                <td>@Model.LeftToPay.PhotographerLeft</td>
+                <td>@Model.Budget.PhotographerCost</td>
+            </tr>
+            <tr>
+                <td>Kamerzysta</td>
+                <td>@Model.Budget.CameraManAdvance</td>
+                <td>@Model.LeftToPay.CameraManLeft</td>
+                <td>@Model.Budget.CameraManCost</td>
+            </tr>
+            <tr>
+                <td>Florystka</td>
+                <td>@Model.Budget.FlowersAdvance</td>
+                <td>@Model.LeftToPay.FlowersLeft</td>
+                <td>@Model.Budget.FlowersCost</td>
+            </tr>
+        </table>
+        <div class="przyciski">
+            <a asp-page="/MainPage" class="btn btn-success">Powrót do strony użytkownika</a>
+            <a asp-page="./UpdateBudget" class="btn btn-success">Aktualizuj wydatki</a>
+        </div>
+    </body>
+
+
+        
+
+
+  

@@ -1,0 +1,181 @@
+﻿@page
+
+@model WeddingApp.Pages.Deadlines.DeadlineModel
+@{
+    ViewData["Title"] = "Deadline1";
+}
+<style>
+    body {
+        background-color:lightgray;
+    }
+    .srodek {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+</style>
+    <body>
+
+        <div class="srodek">
+            <h2> Terminy </h2>
+            <h2>Witaj @Model.User.Login</h2>
+            <h2>Twój termin ślubu to @Model.Deadline.WeddingDate.ToString("d")</h2>
+        </div>
+        <a asp-page="/MainPage" class="btn btn-success">Powrót do strony użytkownika</a>
+        <div style="margin-top:2%">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Termin do spełnienia</th>
+                        <th>Ilość dni, które Ci zostaly do terminu</th>
+                        <th>Sprawdź czym musisz się zająć do tego czasu</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>@Model.Deadline.ListOfDates[0].ToString("d") </td>
+                    <td>@Model.Deadline.Times[0]</td>
+                    <td>
+                        <ol>
+                            <li>@Model.Deadline.Works[0][0]</li>
+                            <li>@Model.Deadline.Works[0][1]</li>
+                            <li>@Model.Deadline.Works[0][2]</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Model.Deadline.ListOfDates[1].ToString("d") </td>
+                    <td>@Model.Deadline.Times[1]</td>
+                    <td>
+                        <ol>
+                            <li>@Model.Deadline.Works[1][0]</li>
+                            <li>@Model.Deadline.Works[1][1]</li>
+                            <li>@Model.Deadline.Works[1][2]</li>
+
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Model.Deadline.ListOfDates[2].ToString("d") </td>
+                    <td>@Model.Deadline.Times[2]</td>
+                    <td>
+                        <ol>
+                            <li>@Model.Deadline.Works[2][0]</li>
+                            <li>@Model.Deadline.Works[2][1]</li>
+                            <li>@Model.Deadline.Works[2][2]</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Model.Deadline.ListOfDates[3].ToString("d") </td>
+                    <td>@Model.Deadline.Times[3]</td>
+                    <td>
+                        <ol>
+                            <li>@Model.Deadline.Works[3][0]</li>
+                            <li>@Model.Deadline.Works[3][1]</li>
+                            <li>@Model.Deadline.Works[3][2]</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Model.Deadline.ListOfDates[4].ToString("d") </td>
+                    <td>@Model.Deadline.Times[4]</td>
+                    <td>
+                        <ol>
+                            <li>@Model.Deadline.Works[4][0]</li>
+                            <li>@Model.Deadline.Works[4][1]</li>
+                            <li>@Model.Deadline.Works[4][2]</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Model.Deadline.ListOfDates[5].ToString("d") </td>
+                    <td>@Model.Deadline.Times[5]</td>
+                    <td>
+                        <ol>
+                            <li>@Model.Deadline.Works[5][0]</li>
+                            <li>@Model.Deadline.Works[5][1]</li>
+                            <li>@Model.Deadline.Works[5][2]</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Model.Deadline.ListOfDates[6].ToString("d") </td>
+                    <td>@Model.Deadline.Times[6]</td>
+                    <td>
+                        <ol>
+                            <li>@Model.Deadline.Works[6][0]</li>
+                            <li>@Model.Deadline.Works[6][1]</li>
+                            <li>@Model.Deadline.Works[6][2]</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Model.Deadline.ListOfDates[7].ToString("d") </td>
+                    <td>@Model.Deadline.Times[7]</td>
+                    <td>
+                        <ol>
+                            <li>@Model.Deadline.Works[7][0]</li>
+                            <li>@Model.Deadline.Works[7][1]</li>
+                            <li>@Model.Deadline.Works[7][2]</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Model.Deadline.ListOfDates[8].ToString("d") </td>
+                    <td>@Model.Deadline.Times[8]</td>
+                    <td>
+                        <ol>
+                            <li>@Model.Deadline.Works[8][0]</li>
+                            <li>@Model.Deadline.Works[8][1]</li>
+                            <li>@Model.Deadline.Works[8][2]</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Model.Deadline.ListOfDates[9].ToString("d") </td>
+                    <td>@Model.Deadline.Times[9]</td>
+                    <td>
+                        <ol>
+                            <li>@Model.Deadline.Works[9][0]</li>
+                            <li>@Model.Deadline.Works[9][1]</li>
+                            <li>@Model.Deadline.Works[9][2]</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Model.Deadline.ListOfDates[10].ToString("d") </td>
+                    <td>@Model.Deadline.Times[10]</td>
+                    <td>
+                        <ol>
+                            <li>@Model.Deadline.Works[10][0]</li>
+                            <li>@Model.Deadline.Works[10][1]</li>
+                            <li>@Model.Deadline.Works[10][2]</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Model.Deadline.ListOfDates[11].ToString("d") </td>
+                    <td>@Model.Deadline.Times[11]</td>
+                    <td>
+                        <ol>
+                            <li>@Model.Deadline.Works[11][0]</li>
+                            <li>@Model.Deadline.Works[11][1]</li>
+                            <li>@Model.Deadline.Works[11][2]</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Model.Deadline.ListOfDates[12].ToString("d") </td>
+                    <td>@Model.Deadline.Times[12]</td>
+                    <td>
+                        <ol>
+                            <li>@Model.Deadline.Works[12][0]</li>
+                            <li>@Model.Deadline.Works[12][1]</li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <a asp-page="/MainPage" class="btn btn-success">Powrót do strony użytkownika</a>
+    </body>
